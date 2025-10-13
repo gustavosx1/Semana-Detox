@@ -453,7 +453,7 @@
 
 
 
-
+        /*Container Sobre-kim */
         .container-kim {
             background-color: white;
             border-radius: 16px;
@@ -468,3 +468,102 @@
             justify-content: space-between;
             gap: 30px;
         }
+
+
+        /* Garantia */
+        .garantia {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+        
+    
+        
+        .garantia-content {
+            margin-left: 250px;
+            margin-right: 530px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .garantia-text {
+            flex: 2;
+        }
+        
+        .garantia-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #1b5e20;
+            text-decoration: solid;
+            text-align: center
+        }
+        .garantia-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #b4b105;
+            text-decoration: solid;
+            text-align: center
+        }
+        .garantia-text p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 35px;
+            color: #004606;
+            text-align: center;
+        }
+        
+        .garantia-image {
+            
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+           
+        }
+        
+        .garantia-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-width: 350px; /* default maximum on desktop */
+            margin: 0 auto;
+        }
+
+        /* CTA inside garantia */
+        .garantia .btn {
+            width: 350px; /* match image width on desktop */
+            display: block;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            align-self: center;
+            text-align: center;
+        }
+
+
+        /* Garantia Responsividade */
+        @media screen and (max-width: 768px) {
+            .garantia-content {
+                flex-direction: column;
+                margin: 0 20px;
+            }
+            .garantia-image {
+                width: 100%;
+                margin-bottom: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* coloca imagem e CTA centralizados */
+            }
+            .garantia-text {
+                flex: none;
+                text-align: center;
+            }
+            .garantia-image img {
+                width: 150px; /* cap mobile size */
+                height: auto;
+                overflow: hidden;
+            }
+            .garantia-cta {
+                width: 150px; /* keep CTA same width as image on mobile */
+            }
+            
+        }
+        
