@@ -1,15 +1,27 @@
 
+        /* Load fonts from Google Fonts and set base defaults */
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
         }
         
         body {
             line-height: 1.6;
             color: #333;
             background-color: #f9f9f9;
+            font-family: 'Lato', sans-serif; /* textos */
+        }
+
+        /* Títulos (use Merriweather) */
+        h1, h2, h3, h4, h5, h6,
+        .section-title,
+        .title,
+        .name,
+        .logo {
+            font-family: 'Merriweather', serif;
         }
         
         .container {
@@ -44,6 +56,7 @@
             font-size: 24px;
             font-weight: bold;
             color: #2a7a4d;
+            font-family: 'Merriweather', serif;
             
 
 
@@ -53,7 +66,7 @@
             margin: 0;
             width: 64px;
             height: 64px;
-            object-fit: cover;
+            object-fit:contain;
             display: block;
             padding: 0;
             padding-top: 12px;
@@ -93,8 +106,12 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-            padding: 150px 0 100px;
+            /* background image from Assets plus a subtle overlay for text contrast */
+            background: linear-gradient(rgba(232,245,233,0.55), rgba(200,230,201,0.55)), url('Assets/images/background.png');
+            background-size: cover;
+            background-position: center 60px;
+            background-repeat: no-repeat;
+            padding: 350px 0 100px;
             text-align: center;
         }
         
@@ -112,19 +129,48 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .sobre-kim {
+            /* background image from Assets plus a subtle overlay for text contrast */
+            background: linear-gradient(rgba(232,245,233,0.55), rgba(200,230,201,0.55)), url('Assets/images/sobre_kim.png');
+            background-size:contain;
+            background-position: center 60px;
+            background-repeat: no-repeat;
+            padding: 350px 0 100px;
+            text-align: center;
+        }
+        
+        .sobre-kim h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #1b5e20;
+        }
+        
+        .sobre-kim p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #388e3c;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         
         .btn {
+            width: 450px;
             display: inline-block;
             background-color: #2a7a4d;
             color: white;
             padding: 15px 30px;
-            border-radius: 5px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
             transition: background-color 0.3s;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .btn:hover {
+            transform: scale(1.10);
+            
             background-color: #1b5e20;
         }
         
@@ -138,6 +184,12 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
+            color: #2a7a4d;
+        }
+        .section-title2 {
+            text-align: center;
+            font-size: 2.5rem;
+        
             color: #2a7a4d;
         }
         
@@ -155,6 +207,14 @@
             font-size: 1.5rem;
             margin-bottom: 20px;
             color: #1b5e20;
+            text-decoration: solid;
+            text-align: center
+        }
+        .about-text p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 35px;
+            color: #004606;
         }
         
         .about-image {
@@ -193,6 +253,18 @@
         .benefit-card h3 {
             color: #2a7a4d;
             margin-bottom: 15px;
+        }
+        .benefits-cta {
+            display: block;            
+            margin: 40px auto 0 auto; /* centraliza horizontalmente e dá espaçamento superior */
+            width: 450px; /* largura fixa em desktop */
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .benefits-cta {
+                width: 90%;
+            }
         }
         
         /* Depoimentos */
@@ -275,9 +347,70 @@
             color: #aaa;
         }
         
-        /* Responsividade */
+       
+
+
+        .text-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            line-height: 1.3;
+        }
+        
+        .name {
+            font-size: 24px;
+            color: #2575fc;
+            font-weight: 600;
+        }
+        
+        .photo-section {
+            
+            flex-shrink: 0;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #013b0d;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .photo {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: linear-gradient(45deg, #01741a, #09da2c);
+            position: relative;
+            padding: 0; /* remove padding so the image can fill the container */
+            overflow: hidden;
+        }
+
+        /* make the img fill the .photo-section and provide a smooth zoom on hover */
+        .photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ensures image crops to fill without distortion */
+            transform: scale(1);
+            transition: transform 350ms ease;
+            will-change: transform;
+        }
+
+        /* hover zoom effect (adjust scale as needed) */
+        .photo-section:hover img {
+            transform: scale(1.12);
+        }
+
+        /*RESPONSIVIDADE*/
+        
         @media (max-width: 768px) {
-            .nav-links {
+             .nav-links {
                 display: none;
             }
             
@@ -302,55 +435,6 @@
             .footer-links li {
                 margin: 0 10px;
             }
-        }
-
-
-
-        .text-section {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .title {
-            font-size: 28px;
-            font-weight: 700;
-            color: #333;
-            line-height: 1.3;
-        }
-        
-        .name {
-            font-size: 24px;
-            color: #2575fc;
-            font-weight: 600;
-        }
-        
-        .photo-section {
-            flex-shrink: 0;
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid #013b0d;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .photo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background: linear-gradient(45deg, #01741a, #09da2c);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 16px;
-            text-align: center;
-            padding: 10px;
-        }
-        
-        @media (max-width: 768px) {
             .container-kim {
                 flex-direction: column;
                 text-align: center;
@@ -361,6 +445,9 @@
                 width: 150px;
                 height: 150px;
                 order: -1;
+            }
+            .btn {
+                width: 100%;
             }
         }
 
