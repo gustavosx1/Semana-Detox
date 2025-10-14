@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semana Detox | Kim Zucatelli</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -38,19 +39,16 @@
 
     <!-- Sobre o Programa -->
     <section id="about" class="about">
-        <div class="container">
-              <h2 class="section-title">Compulsão alimentar, falta de disciplina…</h2>
-            <div class="container-kim" >
-                  
-
-                <h2 class="section-title2" style="color: #bebc24;" style = "text-align: center;">São problemas que você enfrenta diariamente?</h2>
-
-            </div>
+        <div class="container" >
+            <div class="container-title">
+              <h2 class="section-title2" >Compulsão alimentar, falta de disciplina…</h2>
+            <h2 class="section-title" style="color: #bebc24;" style = "text-align: center;">São problemas que você enfrenta diariamente?</h2>
+                </div>
 
 
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Então essa é a mentoria certa pra você!!</h3>
+                    <h3 style="text-align: justify;">Então essa é a mentoria que você precisa!!</h3>
                     <p>Um acompanhamento em grupo de 7 dias projetado para ajudar você a recuperar a energia e reprogramar hábitos alimentares e o ritmo de vida.</p>
                     <p>A Semana Detox, inspirada na milenar filosofia ayurvédica, é sua oportunidade de reconectar-se com seu equilíbrio natural. Descubra seu dosha - Vata, Pitta ou Kapha - e aprenda a fazer escolhas alimentares e de estilo de vida que harmonizem seu corpo, mente e espírito.
 
@@ -72,7 +70,7 @@
     <!-- Benefícios -->
     <section id="benefits" class="benefits">
         <div class="container">
-            <h2 class="section-title">Benefícios</h2>
+            <h2 class="section-title">Benefícios da Semana Detox</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
                     <h3>Mais Energia</h3>
@@ -90,18 +88,7 @@
                     <h3>Suporte em Grupo</h3>
                     <p>Participe de uma comunidade com lives diárias para troca de experiências.</p>
                 </div>
-                <div class="benefit-card">
-                    <h3>Suporte em Grupo</h3>
-                    <p>Participe de uma comunidade com lives diárias para troca de experiências.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>Suporte em Grupo</h3>
-                    <p>Participe de uma comunidade com lives diárias para troca de experiências.</p>
-                </div>
-                <div class="benefit-card">
-                    <h3>Suporte em Grupo</h3>
-                    <p>Participe de uma comunidade com lives diárias para troca de experiências.</p>
-                </div>
+                
 
             </div>
             <!-- CTA centralizado para a seção de benefícios -->
@@ -117,7 +104,7 @@
            
          <div class="container-kim">
         <div class="text-section">
-            <div class="logo">Com quem você vai aprender?</div>
+            <div class="section-title-kim">Com quem você vai aprender?</div>
         </div>
         
         <div class="photo-section">
@@ -125,7 +112,7 @@
         </div>
         
         <div class="text-section">
-            <div class="logo">Kim Zucatelli</div>
+            <div class="section-title-kim">Kim Zucatelli</div>
         </div>
     </div>
     <div class = "about-text">
@@ -151,25 +138,69 @@
     <!-- Depoimentos -->
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2 class="section-title">Depoimentos</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p>"Participar da Semana Detox mudou completamente minha relação com a alimentação. Finalmente entendi o que meu corpo precisa!"</p>
-                    <p><strong>- Maria S.</strong></p>
-                </div>
-                <div class="testimonial">
-                    <p>"A abordagem do Ayurveda foi reveladora. Em apenas 7 dias já senti uma diferença enorme na minha energia e disposição."</p>
-                    <p><strong>- João P.</strong></p>
-                </div>
+            <h1 class="testimonial-text">JUNTE-SE A MAIS DE 17 MIL PUPILAS</h1>
+            
+            <h2 class="testimonial-text2">COM SUAS VIDAS TRANFORMADAS</h2>
+            
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                
+                <img src="Assets/images/AeD4.jpg" style="width:100%">
+               
+                
             </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="Assets/images/AeD2.jpg" style="width:100%">
+                
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="Assets/images/AeD3.jpg" style="width:100%">
+                
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="Assets/images/AeD5.jpg" style="width:100%">
+                
+            </div>
+
+            <!-- Botões de navegação -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- Circulos embaixo da imagem -->
+            <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+
+             <a href="#cta" class="btn">QUERO RESULTADOS COMO ESTES</a>
+
         </div>
     </section>
 
     <!-- Call to Action -->
     <section id="cta" class="cta">
         <div class="container">
-            <h2>Ready para transformar sua vida?</h2>
-            <p>Junte-se a mais de 17 mil alunas que já descobriram os benefícios da Semana Detox. Vagas limitadas!</p>
+            <h2>TUDO ISSO</h2>
+            <p>ESTÁ DISPONÍVEL PARA VOCÊ POR APENAS:</p>
+            <div class="price">
+                <p>em 12 X de </p>
+                <h1>R$83,90</h1>
+            
+            </div>
             <a href="#" class="btn" style="background-color: white; color: #2a7a4d;">Inscreva-se Agora</a>
         </div>
     </section>

@@ -1,16 +1,34 @@
 
-const images = [
-  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1519340333755-197a2f3d9b6b?auto=format&fit=crop&w=600&q=60",
-  "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=600&q=60"
-];
+let slideIndex = 1;
+// Wait until DOM is ready before showing slides (script is loaded in head)
+document.addEventListener('DOMContentLoaded', function() {
+  showSlides(slideIndex);
+});
 
-let currentIndex = 0;
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-function changeSlide(direction) {
-  currentIndex += direction;
-  if(currentIndex < 0) currentIndex = images.length - 1;
-  if(currentIndex >= images.length) currentIndex = 0;
-  document.getElementById("slider-image").src = images[currentIndex];
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  // if there are no slides yet, do nothing
+  if (!slides || slides.length === 0) return;
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }

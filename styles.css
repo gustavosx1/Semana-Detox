@@ -40,7 +40,7 @@
             top: 0;
             z-index: 1000;
         }
-                /* Make header full-bleed so its children can sit flush to the page edges */
+              
                 header .container {
                     width: 100%;
                     max-width: 100%;
@@ -129,13 +129,15 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        /* Sobre Kim Section */
         .sobre-kim {
             /* background image from Assets plus a subtle overlay for text contrast */
             background: linear-gradient(rgba(232,245,233,0.55), rgba(200,230,201,0.55)), url('Assets/images/sobre_kim.png');
             background-size:contain;
             background-position: center 60px;
             background-repeat: no-repeat;
-            padding: 350px 0 100px;
+            padding: 250px 0 100px;
             text-align: center;
         }
         
@@ -153,6 +155,32 @@
             margin-left: auto;
             margin-right: auto;
         }
+        /*Container Sobre-kim */
+        .container-kim {
+            color: #f5f5f5;
+            background-color: rgba(255, 255, 255, 0.247);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 800px;
+            margin: 80px auto;
+            margin-top: auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            gap: 30px;
+        }
+        .section-title-kim {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #005525;
+           
+        }
+
+
+        /* Botão */
         
         .btn {
             width: 450px;
@@ -166,6 +194,8 @@
             transition: background-color 0.3s;
             font-size: 1.1rem;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            
         }
         
         .btn:hover {
@@ -182,16 +212,18 @@
         
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             margin-bottom: 50px;
             color: #2a7a4d;
         }
         .section-title2 {
             text-align: center;
-            font-size: 2.5rem;
+            
+            font-size: 1.5rem;
         
             color: #2a7a4d;
         }
+        
         
         .about-content {
             display: flex;
@@ -232,8 +264,8 @@
         
         /* Benefícios */
         .benefits {
-            padding: 100px 0;
-            background-color: #f5f5f5;
+            padding: 50px 0;
+            background-color:#f9f9f9;
         }
         
         .benefits-grid {
@@ -243,7 +275,7 @@
         }
         
         .benefit-card {
-            background-color: white;
+            background-color: #ffffff;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
@@ -284,13 +316,138 @@
             border-radius: 10px;
             margin: 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            
         }
+
+        /* Center CTA button inside testimonials section */
+        .testimonials .btn {
+            display: block;
+            margin: 24px auto 0 auto;
+        }
+        .testimonial-text{
+            text-align: center;
+            font-size: 1.5rem;
+            color: #005525;
+            margin-bottom: 0px;
+        }
+        .testimonial-text2{
+            font-size: 1.5rem;
+            margin-top: 0px;
+            margin-bottom: 15px;
+            color: #009292;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .testimonial-text, .testimonial-text2 {
+                font-size: 1.2rem;
+                
+            }
+            
+        }
+
+        
+
+        
+
+        /* Slideshow container */
+            .slideshow-container {
+            max-width: 500px;
+            position: relative;
+            margin: auto;
+            }
+
+            /* Hide the images by default */
+            .mySlides {
+            display: none;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            }
+
+            /* Position the "next button" to the right */
+            .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+            }
+
+            /* Caption text */
+            .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            }
+
+            /* Number text (1/3 etc) */
+            .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            }
+
+            /* The dots/bullets/indicators */
+            .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            }
+
+            .active, .dot:hover {
+            background-color: #717171;
+            }
+
+            /* Fading animation */
+            .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+
+            @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+            }
+
+
+
+
+
         
         /* Call to Action */
         .cta {
+
+
             background: linear-gradient(135deg, #2a7a4d, #1b5e20);
             color: white;
-            padding: 100px 0;
+            padding: 50px 0;
             text-align: center;
         }
         
@@ -305,6 +462,36 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+        }
+        .price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+          
+            margin-right: 425px;
+        
+            
+         }
+        .price p {
+            
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #f0f4c3;
+            font-weight: 500;
+            
+        }
+        .price h1 {
+            margin-bottom: 10px;
+            font-size: 3rem;
+            color: #ffeb3b;
+            font-weight: 700;
+            
+        }
+        @media screen and (max-width: 768px) {
+            .price{
+                margin-right: 50px;
+            }
         }
         
         /* Footer */
@@ -436,6 +623,7 @@
                 margin: 0 10px;
             }
             .container-kim {
+                
                 flex-direction: column;
                 text-align: center;
                 padding: 30px 20px;
@@ -453,22 +641,7 @@
 
 
 
-        /*Container Sobre-kim */
-        .container-kim {
-            background-color: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            padding: 40px;
-            max-width: 800px;
-            margin: 80px auto;
-            margin-top: auto;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
+        
 
         /* Garantia */
         .garantia {
