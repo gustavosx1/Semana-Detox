@@ -39,5 +39,6 @@ As fontes são carregadas via Google Fonts no `styles.css` (Lato para textos e M
 - Centralizar elementos: ajuste as regras de `.container`, `.btn` e `.container-kim` no CSS.
 - Carrossel: `scripts.js` inicializa o carrossel; para auto-play adicione um `setInterval` chamando `plusSlides(1)`.
 
-## Licença
+
+
 Direitos reservados à Zucatelli & Santos LTDA
