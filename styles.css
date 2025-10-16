@@ -1,5 +1,5 @@
 
-        /* Load fonts from Google Fonts and set base defaults */
+        /* Carregando as fontes: Lato e Merriweather*/
         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap');
 
         /* Design tokens: paleta centralizada */
@@ -28,6 +28,8 @@
 
         /* Títulos (use Merriweather) */
         h1, h2, h3, h4, h5, h6,
+        .section-title-kim,
+        .section-title-kim2,
         .section-title,
         .title,
         .name,
@@ -44,7 +46,7 @@
         
         /* Header */
         header {
-              background-color: var(--white);
+            background-color: var(--white);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
@@ -62,32 +64,26 @@
         
         
         .logo {
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--contrast);
-            font-family: 'Merriweather', serif;
+            margin-left: 15px;
+            margin-top: 20px;
             
-
-
+            
+            width: 150px;
 
         }
         .logo-img {
-            margin: 0;
-            width: 64px;
-            height: 64px;
-            object-fit:contain;
-            display: block;
-            padding: 0;
-            padding-top: 12px;
+            width: 100%;
+            width: 400px; 
+            height: auto;
+            align-items: start;
+            
         }
 
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-height: 80px;
+            max-height: 60px;
             width: 100%;
             padding: 0;
         }
@@ -97,7 +93,8 @@
             list-style: none;
             gap: 28px; /* controla o espaçamento entre os links */
             margin: 0;
-            padding: 0 16px; /* se quiser um pequeno afastamento da borda direita, ajuste aqui */
+            padding: 0 16px;
+            margin-right: 120px; /* se quiser um pequeno afastamento da borda direita, ajuste aqui */
         }
         
         .nav-links li {
@@ -113,6 +110,33 @@
         
         .nav-links a:hover {
             color: var(--contrast);
+        }
+
+        /* Responsividade Navbar e Logo */
+        @media screen and (max-width: 768px) {
+            /* hide nav links and center the logo area */
+            .nav-links {
+                display: none;
+            }
+
+            .navbar {
+                justify-content: center;
+            }
+
+            .logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 8px auto;
+                width: auto;
+                padding: 6px 0;
+            }
+
+            .logo-img{
+                display: block;
+                margin-top: 15px;
+              
+            }
         }
         
         /* Hero Section */
@@ -167,15 +191,31 @@
             margin-right: auto;
         }
         /*Container Sobre-kim */
+        .container-text{
+            display: contents;
+            color: var(--text);
+            background: linear-gradient(90deg, var(--accent), var(--contrast));
+            border-radius: 26px;
+            max-width: 800px;     
+            max-height: 40px;
+            margin-top: 35px;
+            padding-top: 5px;
+            width: 100%;   
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+             }
+
+
         .container-kim {
-              color: var(--text);
+            color: var(--text);
             background-color: rgba(255, 255, 255, 0.247);
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             padding: 40px;
             max-width: 800px;
             margin: 80px auto;
-            margin-top: auto;
+            margin-top: 15px;
             width: 100%;
             display: flex;
             align-items: center;
@@ -185,24 +225,48 @@
         }
         .section-title-kim {
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.5rem;     
             color: var(--contrast);
+            
            
         }
         .section-title-kim2 {
             text-align: center;
             font-size: 1.5rem;
             color: var(--contrast);
+            font: bold;
            
         }
         @media  screen and (max-width: 768px) {
-            
+            .container-text{
+                display: block;
+            }
+            .container-kim{
+                display: contents;
+                
+                }
+            .sobre-kim{
+                padding-top: 100px;
+            }
+
             .section-title-kim2{
                 display: none;
             }
             .section-title-kim{
-                font-size: 1.2rem;
-                font-weight: 600;
+                
+                color: #ffffff;
+                font-size: 1rem;
+                
+                font-weight: 900;
+            }
+            .photo-section {
+                width: 150px;
+                height: 150px;
+                margin: 0 auto;
+                display: block;
+                
+                
+                margin-bottom: 20px;
             }
             
         }
@@ -234,7 +298,7 @@
         /* Sobre o Programa */
         .about {
             padding: 50px 0;
-              background-color: var(--white);
+            background-color: var(--surface);
         }
         
         .section-title {
@@ -261,6 +325,7 @@
             display: flex;
             align-items: center;
             gap: 15px;
+
         }
         
         .about-text {
@@ -302,8 +367,9 @@
         
         /* Benefícios */
         .benefits {
-            padding: 20px 0;
-              background-color: var(--surface);
+            padding: 10px 0;
+            background-color: var(--surface);
+              
         }
         
         .benefits-grid {
