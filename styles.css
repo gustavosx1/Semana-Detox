@@ -256,7 +256,7 @@
                 
                 color: #ffffff;
                 font-size: 1rem;
-                
+                margin-bottom: 5px;
                 font-weight: 900;
             }
             .photo-section {
@@ -307,7 +307,7 @@
             margin-bottom: 50px;
             color: var(--contrast);
         }
-        .section-title2 {
+        .section-title-2 {
             text-align: center;
             
             font-size: 1.5rem;
@@ -363,6 +363,12 @@
             .about-text h3{
                 font-size: 1.2rem;
             }
+            .section-title, .section-title-2  {
+                font-size: 1.2rem;
+            }
+            .benefits-cta {
+                width: 90%;
+            }
         }
         
         /* Benefícios */
@@ -397,14 +403,6 @@
             text-align: center;
         }
 
-        @media (max-width: 768px) {
-            .section-title, .section-title2 {
-                font-size: 1.2rem;
-            }
-            .benefits-cta {
-                width: 90%;
-            }
-        }
         
         /* Depoimentos */
         .testimonials {
