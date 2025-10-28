@@ -297,8 +297,65 @@
         
         /* Sobre o Programa */
         .about {
+            /*display: none;*/
             padding: 50px 0;
             background-color: var(--surface);
+        }
+
+        /* Ayurveda na Gravidez */
+        .ayurveda-gravidez {
+            display: none;
+            padding: 50px 0;
+            background-color: var(--white);
+        }
+        
+        .ayurveda-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .ayurveda-text {
+            flex: 1;
+        }
+        
+        .ayurveda-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--contrast);
+            text-decoration: solid;
+            text-align: center
+        }
+        
+        .ayurveda-text p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: var(--contrast);
+        }
+        
+        .ayurveda-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-height: 450px;
+        }
+        
+        .ayurveda-image img {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-self: center;
+        }
+
+        @media screen and (max-width: 768px) {
+            .ayurveda-text h3{
+                font-size: 1.2rem;
+            }
+            .ayurveda-content {
+                flex-direction: column;
+            }
         }
         
         .section-title {
